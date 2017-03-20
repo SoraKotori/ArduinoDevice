@@ -14,23 +14,27 @@ int main(void)
     int _RightSpeed = 140;
 
     BOOL Result = ArduinoMR2x30aSpeed(_pArduino, _LeftSpeed, _RightSpeed);
-	if (Result == FALSE)
-	{
-		return EXIT_FAILURE;
-	}
+    if (Result == FALSE)
+    {
+        return EXIT_FAILURE;
+    }
 
-	Sleep(1000);
-	Result = ArduinoMR2x30aSpeed(_pArduino, 0, 0);
-	if (Result == FALSE)
-	{
-		return EXIT_FAILURE;
-	}
+    Sleep(1000);
 
-	Result = ArduinoClose(_pArduino);
-	if (Result == FALSE)
-	{
-		return EXIT_FAILURE;
-	}
+    _LeftSpeed = 0;
+    _RightSpeed = 0;
 
-	return EXIT_SUCCESS;
+    Result = ArduinoMR2x30aSpeed(_pArduino, _LeftSpeed, _RightSpeed);
+    if (Result == FALSE)
+    {
+        return EXIT_FAILURE;
+    }
+
+    Result = ArduinoClose(_pArduino);
+    if (Result == FALSE)
+    {
+        return EXIT_FAILURE;
+    }
+
+    return EXIT_SUCCESS;
 }

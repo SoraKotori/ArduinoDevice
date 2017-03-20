@@ -11,27 +11,27 @@
 
 #endif
 
-void	USART_Initialise(void);
-bool	USART_isNewData(void);
-uint8_t	USART_Receive_Byte(void);
-void	USART_Transmit_Byte(uint8_t Data);
-void	USART_Receive(void *Buffer, uint8_t Size);
-void	USART_Transmit(void *Buffer, uint8_t Size);
+void USART_Initialise(void);
+bool USART_isNewData(void);
+uint8_t USART_Receive_Byte(void);
+void USART_Transmit_Byte(uint8_t Data);
+void USART_Receive(void *Buffer, uint8_t Size);
+void USART_Transmit(void *Buffer, uint8_t Size);
 
-void	DC_Motor_Initialise(void);
-void	DC_Motor_Control(uint8_t Direction, uint8_t PWM_A, uint8_t PWM_B);
-void	DC_Motor_Brake(void);
-void	DC_Motor_Current_Sensing(uint8_t *Current_A, uint8_t *Current_B);
+void DC_Motor_Initialise(void);
+void DC_Motor_Control(uint8_t Direction, uint8_t PWM_A, uint8_t PWM_B);
+void DC_Motor_Brake(void);
+void DC_Motor_Current_Sensing(uint8_t *Current_A, uint8_t *Current_B);
 
-bool	Servo_Motor_Initialise(uint8_t *Pins, uint16_t *Pulses, uint8_t Count);
-bool	Servo_Motor_Control(uint8_t Index, uint16_t Pulse, uint16_t Speed);
-void	Servo_Motor_Wait(uint8_t Index);
+bool Servo_Motor_Initialise(uint8_t *Pins, uint16_t *Pulses, uint8_t Count);
+bool Servo_Motor_Control(uint8_t Index, uint16_t Pulse, uint16_t Speed);
+void Servo_Motor_Wait(uint8_t Index);
 
-void	TWI_Initialise(void);
-void	TWI_Write(void *Buffer, uint8_t Size);
+void TWI_Initialise(void);
+void TWI_Write(void *Buffer, uint8_t Size);
 
-void	MR2x30a_Speed(int16_t LeftSpeed, int16_t RightSpeed);
-void	MR2x30a_Brake(void);
+void MR2x30a_Speed(int16_t LeftSpeed, int16_t RightSpeed);
+void MR2x30a_Brake(void);
 
 enum Opcode
 {

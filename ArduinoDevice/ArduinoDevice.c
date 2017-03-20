@@ -27,6 +27,14 @@ enum Opcode
     Enum_MR2x30a_Start,
     Enum_MR2x30a_Speed,
     Enum_MR2x30a_Brake,
+
+    // Need to add
+    //ArduinoOpen
+    //ArduinoClose
+    //ArduinoServoWait
+    //TimeOut
+    //AnalogSignal
+    //DigitalSignal
 };
 
 typedef struct Arduino
